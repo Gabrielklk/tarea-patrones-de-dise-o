@@ -27,13 +27,13 @@ class Observer(ABC):
 class EmailNotifier(Observer):
     def update(self, order_id: str, status: str):
         # La lógica simula el SMTP Client Tool...
-        print(f"[Notificación Email ✉️] ¡Hola! Tu pedido {order_id} ahora se encuentra: {status}")
+        print(f"[Notificación Email] ¡Hola! Tu pedido {order_id} ahora se encuentra: {status}")
 
 # Observador Concreto 2
 class SMSNotifier(Observer):
     def update(self, order_id: str, status: str):
         # La lógica simula APIs como Twilio o AWS SNS...
-        print(f"[Notificación SMS 📱] E-Commerce: Pedido {order_id} cambió a estado '{status}'")
+        print(f"[Notificación SMS] E-Commerce: Pedido {order_id} cambió a estado '{status}'")
 
 # Objeto Base Transmisor (Subject / Sujeto Activo)
 class OrderSubject:
